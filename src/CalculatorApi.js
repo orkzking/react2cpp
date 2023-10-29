@@ -12,7 +12,7 @@ class CalculatorApi {
   calculate(number1, number2, operation, handler) {
     fetch(this.makeURL(number1,number2,operation))
       .then(res => res.json)
-      .then( (reaponse) => {
+      .then( (response) => {
          handler(response["result"]);
         },
         (err) => {

@@ -11,7 +11,8 @@ class Calculator extends React.Component {
           operation: "",
       };
   }
-  oparationHandler(operation) {
+
+  operationHandler(operation) {
     if(this.state.numberIdx === 1) {
       this.equalHandler();
       return;
@@ -56,7 +57,7 @@ class Calculator extends React.Component {
   }
   
   dotHandler() {
-    const: newNumber = this.state.numbers[this.state.numberIdx] + ".";
+    const newNumber = this.state.numbers[this.state.numberIdx] + ".";
     if(isNaN(newNumber)) {
     	return;
     }
@@ -78,8 +79,8 @@ class Calculator extends React.Component {
     this.props.calculatorApi.calculate(
              this.state.numbers[0],
              this.state.numbers[1],
-             tgis.state.operation,
-             (result){
+             this.state.operation,
+             (result)=>{
                this.setResult(result);
              });
   }

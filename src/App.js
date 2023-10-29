@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './logo.svg';
 import './App.css';
-import CalculatorPanel from './CalculatorPanel'
+//import CalculatorPanel from './CalculatorPanel'
 import Calculator from './Calculator'
 import CalculatorApi from './CalculatorApi'
 
